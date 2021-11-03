@@ -1,0 +1,147 @@
+.page-3{
+ background-color: $grayish-background;   
+}
+
+.section-header{
+    @include flexy($just: center, $align: center, $dir: column);
+    padding: 30px;
+    & > * {
+        margin: 10px;
+    }
+}
+
+.header-left{
+    @include flexy($just: flex-start, $align: center);
+    .svg{
+        padding: 10px;
+        border-radius: 5px;
+        background-color: $accent-blue;
+        margin: 0 10px;
+        svg{
+            fill: $font-white;
+        }
+    }    
+}
+
+.header-right{
+    @include flexy($align: center);
+    form > *{
+        border: 0;
+    }
+
+    form{
+        @include buttonEffect;
+    }
+    form input{
+        padding: 10px;
+        width: 155px;
+    }
+    form button{
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 0 5px 5px 0;
+        color: $font-white;
+        background-color: $accent-blue;
+        cursor: pointer;
+    }
+    
+    border-radius: 5px;
+    background: $white-background;
+    height: 50px;
+    @extend %componentShaddow;
+}
+
+.section-main{
+    margin-top: -20px;
+}
+
+.invitees-header{
+    @include flexy($align: center, $just: center, $dir: column);
+}
+
+.people-cards{
+    @include flexy($just: center, $align: center, $wrap: wrap);
+    padding: 30px;
+
+    .card{
+        margin: 10px;
+        background-color: $white-background;
+        border-radius: 5px;
+        max-width: 12em;
+        overflow: hidden;
+        @extend %componentShaddow;
+        @include flexy($just: center, $align: center, $dir: column);
+        & > * {
+            padding: 5px 0;
+        }
+        padding: 20px 10px;
+        h3{
+            color: $dark4-background;
+        }
+        label{
+            color: $dark1-background;
+        }
+
+        .card-buttons{
+            @include buttonEffect;
+            & > *{
+                margin: 0 2px;
+            }
+        }
+
+        button:first-child{
+            background-color: $accent-blue;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px 10px;
+            color: $font-white;
+        }
+        button:nth-child(2){
+            background-color: $accent-orange;
+            border: 0;
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: $font-white;
+        }
+    }
+
+}
+
+.responded > *{
+    color: $font-dark!important;
+}
+
+.responded{
+    border: 1px solid $font-dark;
+}
+
+@include mq("md" or "lg") {
+    .section-header{
+        @include flexy($just: space-between, $align: center, $dir: row);
+        padding: 30px;
+        & > * {
+            margin: 0;
+        }
+    }
+
+    .header-right{
+        margin-top: 0px;
+        form input{
+            width: 180px;
+        }
+    }
+
+    .section-main{
+        margin-top: 0;
+    }
+
+    .invitees-header{
+        @include flexy($align: flex-start, $just: center, $dir: column);
+        padding: 0 40px;
+    }
+
+    .people-cards{
+        @include flexy($align: center, $just: flex-start, $dir: row);
+    }
+
+}

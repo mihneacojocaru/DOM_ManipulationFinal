@@ -1,0 +1,30 @@
+$breakpoints: (
+  "sm": 300px,
+  "md": 768px,
+  "lg": 1024px,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$font-stack-primary: "Montserrat";
+
+
+//COLORS
+
+$font-dark: #333;
+$font-white: #fff;
+
+$white-background: white;
+$grayish-background: #F2F7FB;
+
+$dark1-background: #263444;
+$dark2-background: #232D3A;
+$dark3-background: #1D2531;
+$dark4-background: #0E141C;
+
+$selected-blue: #42A5F5;
+
+$accent-blue: #4099FF;
+$accent-green: #2ED8B6;
+$accent-orange: #FDB64E;
+$accent-red: #FE5370;

@@ -1,0 +1,61 @@
+header {
+  @include flexy($disp: flex, $dir: row, $just: space-between, $align: center);
+  grid-area: header;
+  background-color: $white-background;
+  position: sticky;
+  top: 0;
+
+  z-index: 10;
+
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    color: $font-dark;
+  }
+
+  h2{
+    padding: 22px 60px 22px 10px;
+  }
+
+  .user-info{
+    @include flexy($align: center);
+    & *{
+      margin: 0 5px;
+    }
+    position: relative;
+
+    .svg::before{
+      position: absolute;
+      content: "";
+      height: 10px;
+      width: 10px;
+      top: 0;
+      left: 37px;
+      background-color: $accent-orange;
+      border-radius: 50%;
+    }
+
+    img{
+      width: 40px;
+      height: auto;
+      border-radius: 50%;
+    }
+    span{
+      display: none;
+    }
+  }
+
+  @include mq("md" or "lg"){
+    h2{
+      display: none;
+    }
+
+    .user-info{
+      span{
+        display: inline;
+      }
+    }
+  }
+}
+
+

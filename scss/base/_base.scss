@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack-primary;
+  }
+
+
+
+body{
+    display: grid;
+    grid-template-columns: minmax(100px, 1fr);
+    grid-template-rows: 70px 50px auto;
+    @include mq("sm") {
+        grid-template-areas: "header"
+                             "nav"
+                             "main";
+    }@include mq("md"){
+        grid-template-columns: 200px 1fr;
+        grid-template-areas: 
+            "nav header"
+            "nav main"
+            "nav main"
+            "nav main";
+    }
+
+}
+
+.hide{
+    display: none;
+}
+
+svg{
+    width: 30px;
+    height: auto;
+}
+
+.page{
+    min-height: 200vh;
+}

@@ -1,0 +1,77 @@
+nav{
+    @include flexy($disp:flex, $align: center);
+    height: 100%;
+    .nav-buttons{
+        width: 100%;
+        @include flexy($disp:flex, $just: space-evenly, $align: center);
+    }
+    grid-area: nav;
+    background-color: $dark1-background;
+    position: sticky;
+        top: 4.35em;
+    a{
+        @include flexy($align: center, $just: center);
+        width: 100%;
+        height: 3.1em;
+        color: whitesmoke;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .selected{
+        background-color: $dark3-background;
+        border-top: 0.30em solid $selected-blue;
+    }
+    .nav-buttons{
+        position: sticky;
+        top: 0;
+        h2{
+            display: none;
+        }
+    }
+
+    svg{
+        fill: white;
+        padding: 0.1875em;
+    }
+    @include mq("md" or "lg"){
+        
+        .nav-buttons{
+            h2{
+                display: block;
+                color: $white-background;
+                margin: .9em 1.5em;
+            }
+        }
+    }
+    @include mq("md" or "lg"){
+        @include flexy($align: flex-start, $just: flex-start!important);
+        .nav-buttons{
+            @include flexy($disp:flex, $dir: column, $just: flex-start, $align: flex-start);
+            a{
+                @include flexy($just: flex-start);
+                padding: 0.68em;
+                height: auto;
+            }
+            a:nth-child(2):after{
+                content: "Dashboard";
+            }
+            a:nth-child(3):after{
+                content: "Students";
+            }
+            a:nth-child(4):after{
+                content: "RSVP";
+            }
+            a:nth-child(5):after{
+                content: "Settings";
+            }
+
+        }
+
+        .selected{
+            background-color: $dark3-background;
+            border-left: 0.31em solid $selected-blue;
+            border-top: 0;
+        }
+    }
+}
