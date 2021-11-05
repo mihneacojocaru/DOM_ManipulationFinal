@@ -24,7 +24,11 @@ header {
     }
     position: relative;
 
-    .svg::before{
+    .icon i {
+      font-size: 2em;
+    }
+
+    .icon::before{
       position: absolute;
       content: "";
       height: 10px;

@@ -349,18 +349,18 @@ template {
   font-family: "Montserrat";
 }
 
-body {
+#root {
   display: grid;
   grid-template-columns: minmax(100px, 1fr);
   grid-template-rows: 70px 50px auto;
 }
 @media (min-width: 300px) {
-  body {
+  #root {
     grid-template-areas: "header" "nav" "main";
   }
 }
 @media (min-width: 768px) {
-  body {
+  #root {
     grid-template-columns: 200px 1fr;
     grid-template-areas: "nav header" "nav main" "nav main" "nav main";
   }
@@ -376,7 +376,7 @@ svg {
 }
 
 .page {
-  min-height: 200vh;
+  min-height: 100vh;
 }
 
 header {
@@ -406,7 +406,10 @@ header .user-info {
 header .user-info * {
   margin: 0 5px;
 }
-header .user-info .svg::before {
+header .user-info .icon i {
+  font-size: 2em;
+}
+header .user-info .icon::before {
   position: absolute;
   content: "";
   height: 10px;
@@ -436,7 +439,6 @@ header .user-info span {
 nav {
   display: flex;
   align-items: center;
-  height: 100%;
   grid-area: nav;
   background-color: #263444;
   position: sticky;
@@ -469,11 +471,15 @@ nav .nav-buttons {
 nav .nav-buttons h2 {
   display: none;
 }
-nav svg {
+nav i {
   fill: white;
   padding: 0.1875em;
+  font-size: 1.5em;
 }
 @media (min-width: 768px) {
+  nav {
+    min-height: 100vh;
+  }
   nav .nav-buttons h2 {
     display: block;
     color: white;
@@ -499,15 +505,19 @@ nav svg {
     height: auto;
   }
   nav .nav-buttons a:nth-child(2):after {
+    padding-left: 0.5em;
     content: "Dashboard";
   }
   nav .nav-buttons a:nth-child(3):after {
+    padding-left: 0.5em;
     content: "Students";
   }
   nav .nav-buttons a:nth-child(4):after {
+    padding-left: 0.5em;
     content: "RSVP";
   }
   nav .nav-buttons a:nth-child(5):after {
+    padding-left: 0.5em;
     content: "Settings";
   }
   nav .selected {
@@ -525,7 +535,6 @@ main {
 .page-1 {
   background-color: #F2F7FB;
   color: #42A5F5;
-  height: 100%;
   text-align: center;
   padding: 30px;
 }
@@ -564,8 +573,9 @@ main {
   background-color: #4099FF;
   margin: 0 10px;
 }
-.header-left .svg svg {
-  fill: #fff;
+.header-left .svg i {
+  color: #fff;
+  font-size: 2.5em;
 }
 
 .header-right {

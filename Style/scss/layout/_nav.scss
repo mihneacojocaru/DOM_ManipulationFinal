@@ -1,6 +1,7 @@
 nav{
     @include flexy($disp:flex, $align: center);
-    height: 100%;
+    
+    
     .nav-buttons{
         width: 100%;
         @include flexy($disp:flex, $just: space-evenly, $align: center);
@@ -30,12 +31,13 @@ nav{
         }
     }
 
-    svg{
+    i{
         fill: white;
         padding: 0.1875em;
+        font-size: 1.5em;
     }
     @include mq("md" or "lg"){
-        
+        min-height: 100vh;
         .nav-buttons{
             h2{
                 display: block;
@@ -54,15 +56,19 @@ nav{
                 height: auto;
             }
             a:nth-child(2):after{
+                padding-left: .5em;
                 content: "Dashboard";
             }
             a:nth-child(3):after{
+                padding-left: .5em;
                 content: "Students";
             }
             a:nth-child(4):after{
+                padding-left: .5em;
                 content: "RSVP";
             }
             a:nth-child(5):after{
+                padding-left: .5em;
                 content: "Settings";
             }
 

@@ -17,8 +17,9 @@
         border-radius: 5px;
         background-color: $accent-blue;
         margin: 0 10px;
-        svg{
-            fill: $font-white;
+        i{
+            color: $font-white;
+            font-size: 2.5em;
         }
     }    
 }

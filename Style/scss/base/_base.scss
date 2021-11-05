@@ -6,8 +6,7 @@
   }
 
 
-
-body{
+#root{
     display: grid;
     grid-template-columns: minmax(100px, 1fr);
     grid-template-rows: 70px 50px auto;
@@ -23,7 +22,6 @@ body{
             "nav main"
             "nav main";
     }
-
 }
 
 .hide{
@@ -36,5 +34,5 @@ svg{
 }
 
 .page{
-    min-height: 200vh;
+    min-height: 100vh;
 }

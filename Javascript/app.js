@@ -1,5 +1,6 @@
-import Product from "./Model/object.js";
+
 import Controller from "./Controller/objectController.js";
+import ViewHome from "./View/ViewHome.js";
 
 
-let product = new Product();
+let home = new ViewHome();
