@@ -113,7 +113,7 @@
 }
 
 .responded{
-    border: 1px solid $font-dark;
+    border: 1px solid $accent-orange;
 }
 
 @include mq("md" or "lg") {
